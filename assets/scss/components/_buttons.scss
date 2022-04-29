@@ -1,0 +1,18 @@
+.btn {
+    @include reset-link;
+    display: inline-block;
+    padding: rem(3) rem(34);
+    font-size: rem(13);
+    line-height: rem(24);
+    color: $white;
+    border-radius: $border-radius-sm;
+    transition: $transition;
+
+    &--light-orange {
+        background-color: $light-orange;
+
+        @include hover-focus {
+            box-shadow: 0 rem(2) rem(5) $light-orange-70;
+        }
+    }
+}

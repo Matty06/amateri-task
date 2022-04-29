@@ -1,0 +1,13 @@
+@mixin reset-link {
+    &,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}

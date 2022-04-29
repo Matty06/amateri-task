@@ -1,0 +1,69 @@
+.card {
+    $self: &;
+    // general styles for cards
+    max-width: $card-width;
+    background: $white;
+    box-shadow: 0 rem(2) rem(12) rgba(22, 94, 157, .04);
+    border-radius: $border-radius-sm;
+
+    &--teaser {
+        #{$self}__body {
+            position: relative;
+            padding: 54px 30px 42px;
+            text-align: center;
+            color: $white;
+            background-image: url('/assets/images/woman-image.jpg'); 
+            background-size: cover; 
+            border-radius: inherit;
+            
+            > * {
+                position: relative;
+                z-index: 2;
+            }
+
+            p {
+                margin: rem(20) 0 rem(2);
+                font-weight: 700;
+                line-height: rem(19.2);
+            }
+
+            &::after,
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                position: absolute;
+                left: 0;
+            }
+
+            &::before {
+                height: 100%;
+                top: 0;
+                background-color: $light-orange-70;
+                border-radius: $border-radius-sm $border-radius-sm 0 0;
+                backdrop-filter: blur(10px);
+                animation: bgAnimation ease-in-out 2s infinite;
+
+                // Fallback for Firefox
+                @-moz-document url-prefix() {
+                    background-color: $light-orange;
+                }
+            }
+
+            
+            &:after {
+                height: rem(6);
+                bottom: rem(-3);
+                left: 0;
+                z-index: 2;
+                background-color: $white;
+                border-radius: 100%;
+            }
+        }
+
+        #{$self}__footer {
+            padding: 12px 30px;
+            text-align: center;
+        }
+    }
+}

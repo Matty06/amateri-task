@@ -1,0 +1,12 @@
+.label {
+    display: inline-block;
+    padding: rem(5) rem(10);
+    text-transform: uppercase;
+    border-radius: $border-radius-sm;
+    font-weight: 700;
+
+    &--white {
+        color: $light-orange;
+        background-color: $white;
+    }
+}

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@-webkit-keyframes bgAnimation {
+  0% {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  25% {
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  50% {
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+  }
+  75% {
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+@keyframes bgAnimation {
+  0% {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  25% {
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  50% {
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+  }
+  75% {
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+
+body {
+  background-color: #25232b;
+  padding: 1rem;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+small {
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.1875rem 2.125rem;
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.btn, .btn:hover {
+  text-decoration: none;
+}
+
+.btn--light-orange {
+  background-color: #ff8a00;
+}
+
+.btn--light-orange:hover, .btn--light-orange:focus {
+  -webkit-box-shadow: 0 0.125rem 0.3125rem rgba(255, 138, 0, 0.7);
+          box-shadow: 0 0.125rem 0.3125rem rgba(255, 138, 0, 0.7);
+}
+
+.card {
+  max-width: 175px;
+  background: #fff;
+  -webkit-box-shadow: 0 0.125rem 0.75rem rgba(22, 94, 157, 0.04);
+          box-shadow: 0 0.125rem 0.75rem rgba(22, 94, 157, 0.04);
+  border-radius: 0.25rem;
+}
+
+.card--teaser .card__body {
+  position: relative;
+  padding: 54px 30px 42px;
+  text-align: center;
+  color: #fff;
+  background-image: url("/assets/images/woman-image.jpg");
+  background-size: cover;
+  border-radius: inherit;
+}
+
+.card--teaser .card__body > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card--teaser .card__body p {
+  margin: 1.25rem 0 0.125rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+}
+
+.card--teaser .card__body::after, .card--teaser .card__body::before {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.card--teaser .card__body::before {
+  height: 100%;
+  top: 0;
+  background-color: rgba(255, 138, 0, 0.7);
+  border-radius: 0.25rem 0.25rem 0 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-animation: bgAnimation ease-in-out 2s infinite;
+          animation: bgAnimation ease-in-out 2s infinite;
+}
+
+@-moz-document url-prefix() {
+  .card--teaser .card__body::before {
+    background-color: #ff8a00;
+  }
+}
+
+.card--teaser .card__body:after {
+  height: 0.375rem;
+  bottom: -0.1875rem;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.card--teaser .card__footer {
+  padding: 12px 30px;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  padding: 0.3125rem 0.625rem;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  font-weight: 700;
+}
+
+.label--white {
+  color: #ff8a00;
+  background-color: #fff;
+}
+/*# sourceMappingURL=default.css.map */
