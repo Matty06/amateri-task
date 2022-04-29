@@ -101,7 +101,7 @@ small {
   padding: 54px 30px 42px;
   text-align: center;
   color: #fff;
-  background-image: url("/assets/images/woman-image.jpg");
+  background-image: url("../../assets/images/woman-image.jpg");
   background-size: cover;
   border-radius: inherit;
 }
